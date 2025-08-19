@@ -17,10 +17,10 @@ layers:
   - F11
   - '`'
   - AL NEXT TASK
-  - '2'
-  - UP ARROW
-  - KEYBOARD INPUT ASSIST ACCEPT
-  - AC PRINT
+  - '&mkp LCLK'
+  - '&mmv MOVE_UP'
+  - '&mkp RCLK'
+  - ':'
   - '6'
   - '7'
   - '8'
@@ -29,10 +29,10 @@ layers:
   - F12
   - {t: ▽, type: trans}
   - AL PREVIOUS TASK
-  - LEFT
-  - DOWN
-  - RIGHT
-  - '%'
+  - '&mmv MOVE_LEFT'
+  - '&mmv MOVE_DOWN'
+  - '&mmv MOVE_RIGHT'
+  - ''''
   - ^
   - '&'
   - KP MULTIPLY
@@ -41,10 +41,10 @@ layers:
   - '|'
   - {t: ▽, type: trans}
   - '='
-  - '-'
-  - KP PLUS
-  - '{'
-  - '}'
+  - AC PRINT
+  - KEYBOARD INPUT ASSIST ACCEPT
+  - '['
+  - ']'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '['
