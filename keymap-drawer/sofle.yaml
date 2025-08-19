@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: sofle}
 layers:
-  default: ['`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', DELETE, ESC, Q, W, E, R, T, Y, U, I, O, P, BSPC, TAB, A, S, D, F, G, H, J, K, L, ;, '''', LSHFT,
-    Z, X, C, V, B, MUTE, '', N, M, ',', ., /, RSHFT, LGUI, LALT, LCTRL, lower, RET, SPACE, raise, RCTRL, RALT, RGUI]
+  default: [ESCAPE, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '=', TAB, Q, W, E, R, T, Y, U, I, O, P, BACKSPACE, '`', A, S, D, F, G, H, J, K, L, ;, '''',
+    LSHFT, '''', Z, X, C, V, MUTE, SLEEP, B, N, M, ',', ., /, LCTRL, LEFT ALT, LCMD, lower, RET, SPACE, raise, RIGHT COMMAND, '[', ']']
   lower:
   - '&studio_unlock'
   - F1
@@ -18,7 +18,7 @@ layers:
   - '`'
   - '1'
   - '2'
-  - '3'
+  - UP ARROW
   - '4'
   - '5'
   - '6'
@@ -29,9 +29,9 @@ layers:
   - F12
   - {t: ▽, type: trans}
   - '!'
-  - '@'
-  - '#'
-  - $
+  - LEFT
+  - DOWN
+  - RIGHT
   - '%'
   - ^
   - '&'
@@ -75,7 +75,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '-'
   - {t: ▽, type: trans}
   - INS
   - PSCRN
@@ -98,8 +98,8 @@ layers:
   - LEFT
   - DOWN
   - RIGHT
-  - DEL
-  - BSPC
+  - {t: ▽, type: trans}
+  - DELETE
   - {t: ▽, type: trans}
   - UNDO
   - CUT
