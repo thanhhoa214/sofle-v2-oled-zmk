@@ -1,7 +1,8 @@
 layout: {zmk_keyboard: sofle}
 layers:
   default: [ESCAPE, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '=', TAB, Q, W, E, R, T, Y, U, I, O, P, '''', '`', A, S, D, F, G, H, J, K, L, UP, BACKSPACE,
-    LSHFT, BACKSPACE, Z, X, C, V, MUTE, SLEEP, B, N, M, LEFT, DOWN, RIGHT, LCTRL, LEFT ALT, LCMD, lower, RET, SPACE, raise, RIGHT COMMAND, '[', ']']
+    LSHFT, BACKSPACE, Z, X, C, V, MUTE, SLEEP, B, N, M, LEFT, DOWN, RIGHT, LCTRL, LEFT ALT, LCMD, lower, RET, SPACE, raise, RIGHT COMMAND, '&msc SCRL_DOWN', '&msc
+      SCRL_UP']
   lower:
   - '&studio_unlock'
   - F1
@@ -17,10 +18,10 @@ layers:
   - F11
   - '`'
   - ','
-  - '&mkp LCLK'
-  - '&mmv MOVE_UP'
-  - '&mkp RCLK'
-  - ;
+  - (
+  - )
+  - '-'
+  - '='
   - '6'
   - '7'
   - '8'
@@ -28,11 +29,11 @@ layers:
   - '0'
   - F12
   - LEFT SHIFT
-  - .
-  - '&mmv MOVE_LEFT'
-  - '&mmv MOVE_DOWN'
-  - '&mmv MOVE_RIGHT'
-  - ''''
+  - Sft+Gui+E
+  - '['
+  - ']'
+  - \
+  - /
   - ^
   - '&'
   - KP MULTIPLY
@@ -40,11 +41,11 @@ layers:
   - )
   - '|'
   - {t: ▽, type: trans}
-  - '='
-  - AC PRINT
-  - KEYBOARD INPUT ASSIST ACCEPT
-  - '['
-  - ']'
+  - Sft+Gui+V
+  - '{'
+  - '}'
+  - ;
+  - ''''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '['
@@ -53,9 +54,9 @@ layers:
   - ':'
   - \
   - {t: ▽, type: trans}
-  - '&studio_unlock'
-  - {t: ▽, type: trans}
-  - '?'
+  - ','
+  - .
+  - F2
   - {type: held}
   - Sft+SPACE
   - {t: ▽, type: trans}
