@@ -1,17 +1,17 @@
 layout: {zmk_keyboard: sofle}
 layers:
   default: [ESCAPE, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '=', TAB, Q, W, E, R, T, Y, U, I, O, P, '''', '`', A, S, D, F, G, H, J, K, L, UP, BACKSPACE,
-    LSHFT, BACKSPACE, Z, X, C, V, MUTE, SLEEP, B, N, M, LEFT, DOWN, RIGHT, LCTRL, LEFT ALT, LCMD, lower, RET, SPACE, raise, RIGHT COMMAND, '&msc SCRL_DOWN', '&msc
+    LSHFT, BACKSPACE, Z, X, C, V, MUTE, Gui+Ctl+Q, B, N, M, LEFT, DOWN, RIGHT, LCTRL, LEFT ALT, LCMD, lower, RET, SPACE, raise, RIGHT COMMAND, '&msc SCRL_DOWN', '&msc
       SCRL_UP']
   lower:
-  - '&studio_unlock'
-  - F1
-  - F2
-  - F3
-  - F4
-  - F5
-  - F6
-  - F7
+  - '0'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - BRI DEC
+  - BRIGHTNESS INC
   - F8
   - F9
   - F10
@@ -56,7 +56,7 @@ layers:
   - {t: ▽, type: trans}
   - ','
   - .
-  - LEFT SHIFT
+  - {t: ▽, type: trans}
   - {type: held}
   - Sft+SPACE
   - {t: ▽, type: trans}
@@ -66,11 +66,11 @@ layers:
   - {t: ▽, type: trans}
   raise:
   - {t: ▽, type: trans}
-  - {t: BT, h: '0'}
-  - {t: BT, h: '1'}
-  - {t: BT, h: '2'}
-  - {t: BT, h: '3'}
-  - {t: BT, h: '4'}
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -79,10 +79,10 @@ layers:
   - '-'
   - {t: ▽, type: trans}
   - INS
-  - PSCRN
-  - CMENU
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - (
+  - )
+  - _
+  - +
   - PG UP
   - {t: ▽, type: trans}
   - UP
@@ -91,10 +91,10 @@ layers:
   - '"'
   - {t: ▽, type: trans}
   - LALT
-  - LCTRL
-  - LSHFT
+  - '{'
+  - '}'
   - {t: ▽, type: trans}
-  - CLCK
+  - '?'
   - PG DN
   - LEFT
   - DOWN
@@ -103,10 +103,10 @@ layers:
   - DELETE
   - {t: ▽, type: trans}
   - UNDO
-  - CUT
-  - COPY
-  - PASTE
-  - {t: ▽, type: trans}
+  - <
+  - '>'
+  - ':'
+  - '"'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
