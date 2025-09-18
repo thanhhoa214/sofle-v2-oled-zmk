@@ -16,7 +16,7 @@ layers:
   - F9
   - F10
   - F11
-  - '`'
+  - TAB
   - ','
   - (
   - )
@@ -28,7 +28,7 @@ layers:
   - '9'
   - '0'
   - F12
-  - LEFT SHIFT
+  - F2
   - Sft+Gui+E
   - '['
   - ']'
@@ -40,7 +40,7 @@ layers:
   - (
   - )
   - '|'
-  - F2
+  - LEFT SHIFT
   - Sft+Gui+V
   - '{'
   - '}'
