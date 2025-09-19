@@ -40,7 +40,7 @@ layers:
   - (
   - )
   - '|'
-  - {t: ▽, type: trans}
+  - Sft+SPACE
   - DELETE
   - '{'
   - '}'
