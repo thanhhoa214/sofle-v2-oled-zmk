@@ -67,11 +67,11 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&kp N0   &kp NUMBER_6   &kp N7                &kp N8                 &kp N9         &kp N0                              &kp C_BRI_DEC  &kp C_BRIGHTNESS_INC  &kp F8           &kp F9     &kp F10   &kp F11
-&kp TAB  &kp LS(LG(E))  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS      &kp EQUAL                           &kp N6         &kp N7                &kp N8           &kp N9     &kp N0    &kp F12
-&kp F2   &kp LS(LG(V))  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp BACKSLASH  &kp SLASH                           &kp CARET      &kp AMPS              &kp KP_MULTIPLY  &kp LPAR   &kp RPAR  &kp PIPE
-&trans   &kp DELETE     &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SEMICOLON  &kp SQT    &trans           &trans  &kp LBKT       &kp RBKT              &kp SEMI         &kp COLON  &kp BSLH  &trans
-                        &kp COMMA             &kp PERIOD             &trans         &trans     &kp LS(SPACE)    &trans  &trans         &trans                &trans           &trans
+&sys_reset  &kp NUMBER_6   &kp N7                &kp N8                 &kp N9         &kp N0                              &kp C_BRI_DEC  &kp C_BRIGHTNESS_INC  &kp F8           &kp F9     &kp F10   &kp F11
+&kp TAB     &kp LS(LG(E))  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS      &kp EQUAL                           &kp N6         &kp N7                &kp N8           &kp N9     &kp N0    &kp F12
+&kp F2      &kp LS(LG(V))  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp BACKSLASH  &kp SLASH                           &kp CARET      &kp AMPS              &kp KP_MULTIPLY  &kp LPAR   &kp RPAR  &kp PIPE
+&trans      &kp DELETE     &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SEMICOLON  &kp SQT    &bootloader      &trans  &kp LBKT       &kp RBKT              &kp SEMI         &kp COLON  &kp BSLH  &trans
+                           &kp COMMA             &kp PERIOD             &trans         &trans     &kp LS(SPACE)    &trans  &trans         &trans                &trans           &trans
             >;
 
             sensor-bindings =
@@ -90,11 +90,11 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&trans  &kp NUMBER_6  &kp N7                &kp N8                 &kp N9          &kp N0                               &trans     &trans    &trans    &trans     &trans      &kp MINUS
-&trans  &kp INS       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE  &kp PLUS                             &kp PG_UP  &trans    &kp UP    &trans     &kp N0      &kp DOUBLE_QUOTES
-&trans  &kp LALT      &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans          &kp QUESTION                         &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp COLON   &kp DELETE
-&trans  &kp K_UNDO    &kp LESS_THAN         &kp GREATER_THAN       &kp COLON       &kp DOUBLE_QUOTES  &trans    &trans  &trans     &trans    &trans    &kp COMMA  &kp PERIOD  &kp QUESTION
-                      &trans                &trans                 &trans          &trans             &trans    &trans  &trans     &trans    &trans    &trans
+&trans  &kp NUMBER_6  &kp N7                &kp N8                 &kp N9          &kp N0                                    &trans     &trans    &trans    &trans     &trans      &sys_reset
+&trans  &kp INS       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE  &kp PLUS                                  &kp PG_UP  &trans    &kp UP    &trans     &kp N0      &kp DOUBLE_QUOTES
+&trans  &kp LALT      &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans          &kp QUESTION                              &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp COLON   &kp DELETE
+&trans  &kp K_UNDO    &kp LESS_THAN         &kp GREATER_THAN       &kp COLON       &kp DOUBLE_QUOTES  &trans    &bootloader  &trans     &trans    &trans    &kp COMMA  &kp PERIOD  &kp QUESTION
+                      &trans                &trans                 &trans          &trans             &trans    &trans       &trans     &trans    &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
