@@ -4,7 +4,7 @@ layers:
     LSHFT, BACKSPACE, Z, X, C, V, MUTE, Gui+Ctl+Q, B, N, M, LEFT, DOWN, RIGHT, LCTRL, LEFT ALT, LCMD, lower, RET, SPACE, raise, RIGHT COMMAND, '&msc SCRL_DOWN', '&msc
       SCRL_UP']
   lower:
-  - '0'
+  - '&sys_reset'
   - '6'
   - '7'
   - '8'
@@ -46,7 +46,7 @@ layers:
   - '}'
   - ;
   - ''''
-  - {t: ▽, type: trans}
+  - '&bootloader'
   - {t: ▽, type: trans}
   - '['
   - ']'
@@ -76,7 +76,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '-'
+  - '&sys_reset'
   - {t: ▽, type: trans}
   - INS
   - (
@@ -108,7 +108,7 @@ layers:
   - ':'
   - '"'
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '&bootloader'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
