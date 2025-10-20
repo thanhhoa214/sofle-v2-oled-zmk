@@ -71,7 +71,7 @@ layers:
   - $
   - '%'
   - LCTRL
-  - '&'
+  - '&reactfragment'
   - '*'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -83,7 +83,7 @@ layers:
   - _
   - +
   - '|'
-  - {t: ▽, type: trans}
+  - '&arrowfunc'
   - UP
   - '|'
   - Sft+Gui+P
