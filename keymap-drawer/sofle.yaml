@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: sofle}
 layers:
   default: [ESCAPE, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '=', TAB, Q, W, E, R, T, Y, U, I, O, P, '''', '`', A, S, D, F, G, H, J, K, L, ;, BACKSPACE,
-    LSHFT, BACKSPACE, Z, X, C, V, MUTE, Gui+Ctl+Q, B, N, M, ',', ., RIGHT COMMAND, LCTRL, LEFT ALT, LCMD, lower, RET, SPACE, raise, (, '[', '{']
+    LSHFT, BACKSPACE, Z, X, C, V, PLAY PAUSE, Gui+Ctl+Q, B, N, M, ',', ., RIGHT COMMAND, LCTRL, LEFT ALT, LCMD, lower, RET, SPACE, raise, (, '[', '{']
   lower:
   - '&sys_reset'
   - '6'
@@ -25,7 +25,7 @@ layers:
   - '7'
   - '8'
   - '9'
-  - '0'
+  - Gui+P
   - F12
   - F2
   - Sft+Gui+V
@@ -86,7 +86,7 @@ layers:
   - {t: ▽, type: trans}
   - UP
   - '|'
-  - '0'
+  - Sft+Gui+P
   - '"'
   - {t: ▽, type: trans}
   - LALT
