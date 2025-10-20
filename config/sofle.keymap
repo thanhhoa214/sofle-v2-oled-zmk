@@ -30,6 +30,22 @@
         };
     };
 
+    macros {
+        arrowfunc: arrowfunc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp EQUAL &kp GT>;
+            label = "ARROWFUNC";
+        };
+
+        reactfragment: reactfragment {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LT &kp GT &kp RET &kp LT &kp FSLH &kp GT>;
+            label = "REACTFRAGMENT";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -89,8 +105,8 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&kp TILDE  &kp EXCLAMATION  &kp AT_SIGN           &kp HASH               &kp DOLLAR      &kp PERCENT                               &kp LCTRL      &kp AMPERSAND          &kp ASTERISK       &trans           &trans            &sys_reset
-&trans     &kp INS          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE  &kp PLUS                                  &kp PIPE       &trans                 &kp UP             &kp PIPE         &kp LS(LG(P))     &kp DOUBLE_QUOTES
+&kp TILDE  &kp EXCLAMATION  &kp AT_SIGN           &kp HASH               &kp DOLLAR      &kp PERCENT                               &kp LCTRL      &reactfragment         &kp ASTERISK       &trans           &trans            &sys_reset
+&trans     &kp INS          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE  &kp PLUS                                  &kp PIPE       &arrowfunc             &kp UP             &kp PIPE         &kp LS(LG(P))     &kp DOUBLE_QUOTES
 &trans     &kp LALT         &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE        &kp QUESTION                              &kp AMPERSAND  &kp LEFT               &kp DOWN           &kp RIGHT        &kp COLON         &kp DELETE
 &trans     &kp K_UNDO       &kp LESS_THAN         &kp GREATER_THAN       &kp COLON       &kp DOUBLE_QUOTES  &trans    &bootloader  &kp MINUS      &kp EQUAL              &kp SLASH          &kp LESS_THAN    &kp GREATER_THAN  &kp RIGHT_SHIFT
                             &trans                &trans                 &trans          &trans             &trans    &kp ENTER    &trans         &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE
