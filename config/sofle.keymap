@@ -34,15 +34,36 @@
         arrowfunc: arrowfunc {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp EQUAL &kp GT>;
+            bindings = <&kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp SPACE &kp EQUAL &kp GREATER_THAN &kp SPACE &kp LEFT_BRACE &kp RIGHT_BRACE &kp LEFT_ARROW>;
             label = "ARROWFUNC";
         };
 
         reactfragment: reactfragment {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LT &kp GT &kp RET &kp LT &kp FSLH &kp GT>;
+            bindings = <&kp LG(X) &kp LT &kp GT &kp LG(V)>;
             label = "REACTFRAGMENT";
+        };
+
+        classname: classname {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACE &kp RIGHT_BRACE &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp LEFT_ARROW &kp LEFT_ARROW &kp C &kp N>;
+            label = "CLASSNAME";
+        };
+
+        down10: down10 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DOWN &kp DOWN_ARROW &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN>;
+            label = "DOWN10";
+        };
+
+        up10: up10 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp UP_ARROW &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW>;
+            label = "UP10";
         };
     };
 
@@ -105,11 +126,11 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&kp TILDE  &kp EXCLAMATION  &kp AT_SIGN           &kp HASH               &kp DOLLAR      &kp PERCENT                               &kp LCTRL      &reactfragment         &kp ASTERISK       &trans           &trans            &sys_reset
-&trans     &kp INS          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE  &kp PLUS                                  &kp PIPE       &arrowfunc             &kp UP             &kp PIPE         &kp LS(LG(P))     &kp DOUBLE_QUOTES
-&trans     &kp LALT         &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE        &kp QUESTION                              &kp AMPERSAND  &kp LEFT               &kp DOWN           &kp RIGHT        &kp COLON         &kp DELETE
-&trans     &kp K_UNDO       &kp LESS_THAN         &kp GREATER_THAN       &kp COLON       &kp DOUBLE_QUOTES  &trans    &bootloader  &kp MINUS      &kp EQUAL              &kp SLASH          &kp LESS_THAN    &kp GREATER_THAN  &kp RIGHT_SHIFT
-                            &trans                &trans                 &trans          &trans             &trans    &kp ENTER    &trans         &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE
+&kp TILDE  &kp EXCLAMATION  &kp AT_SIGN           &kp HASH               &kp DOLLAR      &kp PERCENT                               &kp LCTRL      &reactfragment  &up10              &trans           &trans            &sys_reset
+&trans     &kp INS          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE  &kp PLUS                                  &kp PIPE       &arrowfunc      &kp UP             &classname       &kp LS(LG(P))     &kp DOUBLE_QUOTES
+&trans     &kp LALT         &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE        &kp QUESTION                              &kp AMPERSAND  &kp LEFT        &kp DOWN           &kp RIGHT        &kp COLON         &kp DELETE
+&trans     &kp K_UNDO       &kp LESS_THAN         &kp GREATER_THAN       &kp COLON       &kp DOUBLE_QUOTES  &trans    &bootloader  &kp MINUS      &kp EQUAL       &down10            &kp LESS_THAN    &kp GREATER_THAN  &kp RIGHT_SHIFT
+                            &trans                &trans                 &trans          &trans             &trans    &kp ENTER    &trans         &kp LS(SPACE)   &kp RIGHT_BRACKET  &kp RIGHT_BRACE
             >;
 
             sensor-bindings =
