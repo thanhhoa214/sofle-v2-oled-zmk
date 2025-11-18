@@ -72,7 +72,7 @@ layers:
   - '%'
   - LCTRL
   - '&reactfragment'
-  - '*'
+  - '&up10'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '&sys_reset'
@@ -85,7 +85,7 @@ layers:
   - '|'
   - '&arrowfunc'
   - UP
-  - '|'
+  - '&classname'
   - Sft+Gui+P
   - '"'
   - {t: ▽, type: trans}
@@ -110,7 +110,7 @@ layers:
   - '&bootloader'
   - '-'
   - '='
-  - /
+  - '&down10'
   - <
   - '>'
   - RIGHT SHIFT
@@ -121,7 +121,7 @@ layers:
   - {t: ▽, type: trans}
   - ENTER
   - {type: held}
-  - )
+  - Sft+SPACE
   - ']'
   - '}'
   adjust:
