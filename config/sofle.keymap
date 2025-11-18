@@ -48,7 +48,7 @@
         classname: classname {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_BRACE &kp RIGHT_BRACE &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp LEFT_ARROW &kp LEFT_ARROW &kp C &kp N>;
+            bindings = <&kp LG(X) &kp LEFT_BRACE &kp C &kp N &kp LEFT_PARENTHESIS &kp LG(V) &kp COMMA &kp SPACE &kp C &kp L &kp A &kp S &kp S &kp LS(N) &kp A &kp M &kp E>;
             label = "CLASSNAME";
         };
 
