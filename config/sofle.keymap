@@ -21,14 +21,7 @@
 / {
     // Activate ADJUST layer by pressing raise and lower
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        adjust_layer {
-            if-layers = <1 2>;
-            then-layer = <3>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 
     macros {
         arrowfunc: arrowfunc {
@@ -65,6 +58,13 @@
             bindings = <&kp UP_ARROW &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW>;
             label = "UP10";
         };
+
+        cmd_shift: cmd_shift {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LEFT_SHIFT)>;
+            label = "CMD_SHIFT";
+        };
     };
 
     keymap {
@@ -81,14 +81,16 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp ESCAPE  &kp N1         &kp N2     &kp N3        &kp N4    &kp N5                                     &kp N6  &kp N7         &kp N8         &kp N9          &kp N0         &kp EQUAL
-&kp TAB     &kp Q          &kp W      &kp E         &kp R     &kp T                                      &kp Y   &kp U          &kp I          &kp O           &kp P          &kp SINGLE_QUOTE
-&kp GRAVE   &kp A          &kp S      &kp D         &kp F     &kp G                                      &kp H   &kp J          &kp K          &kp L           &kp SEMICOLON  &kp BACKSPACE
-&kp LSHFT   &kp BACKSPACE  &kp Z      &kp X         &kp C     &kp V   &kp K_PLAY_PAUSE    &kp LG(LC(Q))  &kp B   &kp N          &kp M          &kp COMMA       &kp PERIOD     &kp RIGHT_COMMAND
-                           &kp LCTRL  &kp LEFT_ALT  &kp LCMD  &mo 1   &kp RET             &kp SPACE      &mo 2   &kp LS(SPACE)  &kp LS(ENTER)  &kp LEFT_BRACE
+&kp ESCAPE  &kp N1         &kp N2     &kp N3        &kp N4    &kp N5                                     &kp N6  &kp N7  &kp N8         &kp N9          &kp N0         &kp EQUAL
+&kp TAB     &kp Q          &kp W      &kp E         &kp R     &kp T                                      &kp Y   &kp U   &kp I          &kp O           &kp P          &kp SINGLE_QUOTE
+&kp GRAVE   &kp A          &kp S      &kp D         &kp F     &kp G                                      &kp H   &kp J   &kp K          &kp L           &kp SEMICOLON  &kp BACKSPACE
+&kp LSHFT   &kp BACKSPACE  &kp Z      &kp X         &kp C     &kp V   &kp K_PLAY_PAUSE    &kp LG(LC(Q))  &kp B   &kp N   &kp M          &kp COMMA       &kp PERIOD     &kp RIGHT_COMMAND
+                           &kp LCTRL  &kp LEFT_ALT  &kp LCMD  &mo 1   &kp RET             &kp SPACE      &mo 2   &mo 3   &kp LS(SPACE)  &kp LEFT_BRACE
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
+                <&inc_dec_kp UP_ARROW DOWN_ARROW>;
         };
 
         lower_layer {
@@ -126,11 +128,11 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&kp TILDE  &kp EXCLAMATION  &kp AT_SIGN           &kp HASH               &kp DOLLAR      &kp PERCENT                               &kp LCTRL      &reactfragment  &up10              &trans           &trans            &sys_reset
-&trans     &kp INS          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE  &kp PLUS                                  &kp PIPE       &arrowfunc      &kp UP             &classname       &kp LS(LG(P))     &kp DOUBLE_QUOTES
-&trans     &kp LALT         &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE        &kp QUESTION                              &kp AMPERSAND  &kp LEFT        &kp DOWN           &kp RIGHT        &kp COLON         &kp DELETE
-&trans     &kp K_UNDO       &kp LESS_THAN         &kp GREATER_THAN       &kp COLON       &kp DOUBLE_QUOTES  &trans    &bootloader  &kp MINUS      &kp EQUAL       &down10            &kp LESS_THAN    &kp GREATER_THAN  &kp RIGHT_SHIFT
-                            &trans                &trans                 &trans          &trans             &trans    &kp ENTER    &trans         &kp LS(SPACE)   &kp RIGHT_BRACKET  &kp RIGHT_BRACE
+&kp TILDE  &kp EXCLAMATION  &kp AT_SIGN           &kp HASH               &kp DOLLAR      &kp PERCENT                               &kp LCTRL      &trans         &up10              &trans           &trans            &sys_reset
+&trans     &kp INS          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE  &kp PLUS                                  &kp PIPE       &kp LG(LEFT)   &kp UP             &kp LG(RIGHT)    &kp LS(LG(P))     &kp DOUBLE_QUOTES
+&trans     &kp LALT         &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE        &kp QUESTION                              &kp PIPE       &kp LEFT       &kp DOWN           &kp RIGHT        &kp COLON         &kp DELETE
+&trans     &kp K_UNDO       &kp LESS_THAN         &kp GREATER_THAN       &kp COLON       &kp DOUBLE_QUOTES  &trans    &bootloader  &kp AMPERSAND  &kp LA(LEFT)   &down10            &kp LA(RIGHT)    &kp GREATER_THAN  &kp RIGHT_SHIFT
+                            &trans                &trans                 &trans          &trans             &trans    &kp ENTER    &trans         &kp LS(SPACE)  &kp RIGHT_BRACKET  &kp RIGHT_BRACE
             >;
 
             sensor-bindings =
@@ -148,11 +150,11 @@
 
             label = "adjust";
             bindings = <
-&bt BT_CLR         &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                               &none  &none  &none  &none  &none  &none
-&ext_power EP_TOG  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF                            &none  &none  &none  &none  &none  &none
-&none              &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &none            &none            &none                                      &none  &none  &none  &none  &none  &none
-&none              &none            &none            &none            &none            &none            &rgb_ug RGB_TOG    &none  &none  &none  &none  &none  &none  &none
-                                    &none            &none            &none            &none            &none              &none  &none  &none  &none  &none
+&bt BT_CLR         &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                               &none          &none          &none           &none              &none   &none
+&ext_power EP_TOG  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF                            &none          &none          &none           &none              &trans  &none
+&none              &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &none            &none            &none                                      &none          &arrowfunc     &reactfragment  &classname         &none   &none
+&none              &none            &none            &none            &none            &none            &rgb_ug RGB_TOG    &none  &kp F12        &kp LG(LS(N))  &kp LG(LS(F))   &kp LG(LS(COMMA))  &none   &none
+                                    &none            &none            &none            &none            &none              &none  &kp LG(LS(P))  &none          &none           &none
             >;
         };
     };
