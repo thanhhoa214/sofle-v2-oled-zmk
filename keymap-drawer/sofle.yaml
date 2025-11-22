@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: sofle}
 layers:
   default: [ESCAPE, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '=', TAB, Q, W, E, R, T, Y, U, I, O, P, '''', '`', A, S, D, F, G, H, J, K, L, ;, BACKSPACE,
-    LSHFT, BACKSPACE, Z, X, C, V, PLAY PAUSE, Gui+Ctl+Q, B, N, M, ',', ., RIGHT COMMAND, LCTRL, LEFT ALT, LCMD, lower, RET, SPACE, raise, Sft+SPACE, Sft+ENTER, '{']
+    LSHFT, BACKSPACE, Z, X, C, V, PLAY PAUSE, Gui+Ctl+Q, B, N, M, ',', ., RIGHT COMMAND, LCTRL, LEFT ALT, LCMD, lower, RET, SPACE, raise, adjust, Sft+SPACE, '{']
   lower:
   - '&sys_reset'
   - '6'
@@ -71,7 +71,7 @@ layers:
   - $
   - '%'
   - LCTRL
-  - '&reactfragment'
+  - {t: ▽, type: trans}
   - '&up10'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -83,9 +83,9 @@ layers:
   - _
   - +
   - '|'
-  - '&arrowfunc'
+  - Gui+LEFT
   - UP
-  - '&classname'
+  - Gui+RIGHT
   - Sft+Gui+P
   - '"'
   - {t: ▽, type: trans}
@@ -94,7 +94,7 @@ layers:
   - '}'
   - '|'
   - '?'
-  - '&'
+  - '|'
   - LEFT
   - DOWN
   - RIGHT
@@ -108,10 +108,10 @@ layers:
   - '"'
   - {t: ▽, type: trans}
   - '&bootloader'
-  - '-'
-  - '='
+  - '&'
+  - Alt+LEFT
   - '&down10'
-  - <
+  - Alt+RIGHT
   - '>'
   - RIGHT SHIFT
   - {t: ▽, type: trans}
@@ -147,7 +147,7 @@ layers:
   - ''
   - ''
   - ''
-  - ''
+  - {t: ▽, type: trans}
   - ''
   - ''
   - RGB BRD
@@ -156,9 +156,9 @@ layers:
   - ''
   - ''
   - ''
-  - ''
-  - ''
-  - ''
+  - '&arrowfunc'
+  - '&reactfragment'
+  - '&classname'
   - ''
   - ''
   - ''
@@ -169,6 +169,10 @@ layers:
   - ''
   - RGB TOG
   - ''
+  - F12
+  - Gui+Sft+N
+  - Gui+Sft+F
+  - Gui+Sft+,
   - ''
   - ''
   - ''
@@ -177,11 +181,7 @@ layers:
   - ''
   - ''
   - ''
-  - ''
+  - Gui+Sft+P
   - {type: held}
-  - ''
-  - ''
-  - {type: held}
-  - ''
   - ''
   - ''
