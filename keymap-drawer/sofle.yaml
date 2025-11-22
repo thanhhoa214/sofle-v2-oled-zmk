@@ -144,9 +144,9 @@ layers:
   - RGB SAI
   - RGB EFF
   - ''
+  - '&template_string'
   - ''
-  - ''
-  - ''
+  - Gui+Sft+O
   - {t: ▽, type: trans}
   - ''
   - ''
@@ -159,8 +159,8 @@ layers:
   - '&arrowfunc'
   - '&reactfragment'
   - '&classname'
-  - ''
-  - ''
+  - Alt+BACKSPACE
+  - Alt+DELETE
   - ''
   - ''
   - ''
