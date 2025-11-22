@@ -41,7 +41,7 @@
         reactfragment: reactfragment {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(X) &kp LT &kp GT &kp LG(V)>;
+            bindings = <&kp LG(X) &kp LT &kp GT &kp LG(V) &kp LESS_THAN &kp SLASH &kp GREATER_THAN>;
             label = "REACTFRAGMENT";
         };
 
