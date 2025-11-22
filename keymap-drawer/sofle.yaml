@@ -155,7 +155,7 @@ layers:
   - ''
   - ''
   - ''
-  - ''
+  - Gui+Sft+SPACE
   - '&arrowfunc'
   - '&reactfragment'
   - '&classname'
